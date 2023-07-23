@@ -65,9 +65,13 @@ function setUnread(count) {
         chrome.action.setBadgeBackgroundColor({ color: [255, 0, 0, 128] });
     }
     if (Number.isInteger(count)) {
+        if (count == 0) {
+            return
+        }
         if (count > 9) {
             count = "10+"
         }
+        
         chrome.action.setBadgeText({
             text: '' + count,
         });
