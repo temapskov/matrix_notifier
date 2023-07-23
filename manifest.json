@@ -1,10 +1,16 @@
 {
     "name": "Matrix Extension",
     "description": "This is an extension for Google Chrome that reports the number of notifications in the matrix",
-    "version": "1.0",
+    "version": "0.1.0",
     "manifest_version": 3,
+    "icons": {
+        "16": "element_logo_16.png",
+        "32": "element_logo_32.png",
+        "48": "element_logo_48.png",
+        "128": "element_logo_128.png"
+    },
     "action": {
-        "default_icon": "logo.png"
+        "default_icon": "element_logo_128.png"
     },
     "options_page": "options.html",
     "background": {
