@@ -66,7 +66,10 @@ function setUnread(count) {
     }
     if (Number.isInteger(count)) {
         if (count == 0) {
-            return
+            chrome.action.setBadgeText({
+                text: '',
+            });
+            return;
         }
         if (count > 9) {
             count = "10+"
@@ -75,6 +78,8 @@ function setUnread(count) {
         chrome.action.setBadgeText({
             text: '' + count,
         });
+
+        return;
     }
 }
 
