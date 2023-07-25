@@ -1,5 +1,10 @@
 const url = new URL("https://matrix.mqcore.io/_matrix/client/v3/sync")
 
+chrome.runtime.onStartup.addListener(() => {
+    fetchDataFromUrl()
+    setInterval(fetchDataFromUrl, 5000); // 5000 миллисекунд = 15 секунд
+});
+
 chrome.runtime.onInstalled.addListener(() => {
     fetchDataFromUrl()
     setInterval(fetchDataFromUrl, 5000); // 5000 миллисекунд = 15 секунд
