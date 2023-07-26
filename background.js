@@ -66,7 +66,7 @@ function setUnread(count) {
         console.warn("Not number", count);
         return;
     }
-    if (count > 10) {
+    if (count > 9) {
         chrome.action.setBadgeBackgroundColor({ color: [255, 0, 0, 128] });
     }
     if (Number.isInteger(count)) {
